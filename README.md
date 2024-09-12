@@ -1,1 +1,2 @@
-# fantasy-themed-portfolio
+# node modules
+node_modules

@@ -1,0 +1,77 @@
+.fantasy-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.fantasy-drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fantasy-drawer {
+  width: 300px;
+  max-width: 100%;
+  height: 100%;
+  background-color: #f0e6d2;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  border-radius: 0 10px 10px 0;
+}
+
+.fantasy-drawer-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #8b4513;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.fantasy-drawer-content {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.drawer-title {
+  font-size: 1.5rem;
+  color: #8b4513;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #8b4513;
+  color: #f0e6d2;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #a0522d;
+}
