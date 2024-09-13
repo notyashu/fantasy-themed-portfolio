@@ -53,6 +53,7 @@ const FantasyPortfolioMap = () => {
         <ImageOverlay url={PortfolioMapImage} bounds={bounds} />
         {regions.map((region, index) => (
           <Polygon
+          style={{ focus: { outline: 'none',   boxshadow: 'none'} }}
             key={index}
             positions={region.coords}
             pathOptions={{ color: 'transparent', fillOpacity: 0 }}
