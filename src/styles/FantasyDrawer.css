@@ -4,7 +4,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  background-color: hsla(0, 0%, 0%, 0.05);
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -20,8 +21,7 @@
 }
 
 .fantasy-drawer {
-  width: 300px;
-  max-width: 100%;
+  width: 340px;
   height: 100%;
   background-color: #f0e6d2;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .fantasy-drawer-close {
@@ -38,13 +38,17 @@
   border: none;
   color: #8b4513;
   cursor: pointer;
-  padding: 10px;
+  padding-top: 20px;
+  padding-right: 20px;
+
 }
 
 .fantasy-drawer-content {
   padding: 20px;
   flex-grow: 1;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .drawer-title {
@@ -58,20 +62,25 @@
 .nav-button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 10px;
   background-color: #8b4513;
   color: #f0e6d2;
   border: none;
-  border-radius: 30px;
+  border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'MedievalSharp', cursive;
-  font-size: 1rem;
+  font-family: 'Macondo', 'MedievalSharp', cursive;
+  font-size: 1.2rem;
   text-decoration: none;
   text-align: center;
 }
 
 .nav-button:hover {
   background-color: #a0522d;
+}
+
+.nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f0e6d2, 0 0 0 4px #8b4513;
 }

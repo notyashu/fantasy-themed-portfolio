@@ -4,7 +4,7 @@ html, body, #root {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  font-family: 'Macondo', "MedievalSharp", cursive;
+  font-family: 'MedievalSharp', "Macondo", cursive;
   background-color: transparent;
   color: #3c2f2f;
 }
@@ -12,4 +12,11 @@ html, body, #root {
 .app-container {
   height: 100%;
   width: 100%;
+}
+
+@supports (-webkit-backdrop-filter: none) {
+  .fantasy-drawer-overlay {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
 }

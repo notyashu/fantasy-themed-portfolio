@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import FantasyPortfolioMap from './components/FantasyPortfolioMap';
-import ProjectsPage from './pages/ProjectsPage';
-import SkillsPage from './pages/SkillsPage';
-import ExperiencePage from './pages/ExperiencePage';
-import EducationPage from './pages/EducationPage';
-import ContactPage from './pages/ContactPage';
-import AboutPage from './pages/AboutPage';
+import {
+  ProjectsPage,
+  SkillsPage,
+  ExperiencePage,
+  EducationPage,
+  ContactPage,
+  AboutPage
+} from './pages';
+import { preloadImages } from './utils/imagePreloader';
 import './styles/App.css';
+import BackgroundImage from './assets/grunge-vintage-old-paper-background.jpg';
 
 const App = () => {
+  useEffect(() => {
+    preloadImages([BackgroundImage]);
+  }, []);
+
   return (
     <Router>
       <Routes>
