@@ -1,2 +1,2 @@
-# node modules
-node_modules
+# Fantasy Themed Portfio
+A Majestic Portfolio Template
